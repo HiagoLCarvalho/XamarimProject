@@ -4,30 +4,26 @@
              x:Class="AppBindingCommands.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="Purple" Padding="24" CornerRadius="0">
-            <Label Text="Bem Vindo a Tesla!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="Pink" Padding="24" CornerRadius="0">
+            <Label Text="ApplicationBinding!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label Text="This is ELON MUSK!" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Entre no nosso Site!!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Visita Tesla!! "/>
-                        <Span Text="https://www.tesla.com/" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
 
-
-        <Label x:Name="lblInformacoes" Text="" />
+        
         <Button x:Name="btnAtualizarInfo" 
-                Text="Atualizar Informações" 
+                BackgroundColor="Pink" Text="Atualizar Informações" TextColor="White" 
                 Clicked="btnAtualizarInfo_Clicked"/>
+        <Label x:Name="lblInformacoes" Text="" />
 
         <Entry Text="{Binding Name}" Placeholder="Enter Name"></Entry>
         <Label Text="{Binding DisplayName}"></Label>
+        
+        <Label Text="{Binding DisplayMessage}" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
 
+        <Button Command="{Binding ShowMessageCommand}" BackgroundColor="Pink" Padding="24" CornerRadius="0" Text="Mensagem" TextColor="White" />
+        <Button Command="{Binding CountCommand}" BackgroundColor="Pink" Padding="24" CornerRadius="0" Text="Contar Caracteres" TextColor="White" />
+        <Button Command="{Binding CleanCommand}" BackgroundColor="Pink" Padding="24" CornerRadius="0" Text="Limpar Campos" TextColor="White" />
+        <Button Command="{Binding OptionCommand}" BackgroundColor="Pink" Padding="24" CornerRadius="0" Text="Exibir Opções" TextColor="White" />
     </StackLayout>
+    
 </ContentPage>

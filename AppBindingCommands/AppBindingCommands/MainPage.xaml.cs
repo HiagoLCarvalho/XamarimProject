@@ -10,11 +10,12 @@ namespace AppBindingCommands
 {
     public partial class MainPage : ContentPage
     {
+        private MainPageViewModel viewModel;
         public MainPage()
         {
             InitializeComponent();
-
-            BindingContext = new MainPageViewModel();
+            viewModel = new MainPageViewModel();
+            BindingContext = viewModel;
         }
     private void btnAtualizarInfo_Clicked(object sender, EventArgs e)
         {
